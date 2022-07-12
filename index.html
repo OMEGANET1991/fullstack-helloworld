@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <BODY>
+        esta es la respuesta:
+        <pre></pre>
+
+        <span id="nombre"></span> sabe <span id="numero"></span> lenguages
+    </BODY>
+    <script>
+    fetch("/api")
+    .then(res => res.json())
+    .then(data => {
+        document.querySelector('pre').innerHTML = JSON.stringify(data, null, 2)
+
+        document.querySelector('#nombre').innerText = data.nombre;
+
+        document.querySelector('#numero').innerText = data.lenguajes.length;
+
+    })
+    </script>
+</html>
