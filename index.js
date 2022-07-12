@@ -15,7 +15,7 @@ const requestListener = function (req, res) {
         res.end (`
         
         {
-            "nombre": "martincho",
+            "nombre": "elias",
             "lenguajes": ["javascript","php", "rust", "go"]
         }
         
