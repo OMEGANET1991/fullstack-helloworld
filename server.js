@@ -22,13 +22,22 @@ const requestListener = function (req, res) {
         }
         
         `)
-    } else {
+    } else if (req.url === '/') {
         fs.readFile(__dirname + '/index.html').then(content => {
             res.setHeader('content-type', 'text/html')
             res.writeHead(200);
             res.end(content)
         })
+    } else if(req.url === '/apibateria.js')  {
+            fs.readFile(__dirname + '/apibateria.js').then(content => {
+                res.setHeader('content-type', 'application/javascript')
+                res.writeHead(200);
+                res.end(content)
+            })
+    } else {
+        res.end(req.url)
     }
+    
 
 }
 
