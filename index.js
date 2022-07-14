@@ -9,6 +9,8 @@ const port = 1111 ;
 
 const requestListener = function (req, res) {
 
+    console.log(req.url);
+
     if (req.url === '/api') {
         res.setHeader("content-type" , "application/json")
         res.writeHead (200);
