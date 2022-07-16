@@ -1,11 +1,32 @@
 <!DOCTYPE html>
 <html>
+
+    <head>
+        <title>onceonce</title>
+        <style>
+            #nombre {
+                color: blue;
+                text-decoration: underline;
+                font-weight:bold;
+            }
+        </style>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+
+
     <BODY>
         esta es la respuesta:
         <pre></pre>
 
         <span id="nombre"></span> sabe <span id="numero"></span> lenguages
     </BODY>
+
+
+
+
+
+
+    
     <script>
     fetch("/api")
     .then(res => res.json())
