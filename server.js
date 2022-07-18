@@ -34,6 +34,12 @@ const requestListener = function (req, res) {
                 res.writeHead(200);
                 res.end(content)
             })
+    } else if(req.url === '/styles.css')  {
+            fs.readFile(__dirname + '/styles.css').then(content => {
+                res.setHeader('content-type', 'text/css')
+                res.writeHead(200);
+                res.end(content)
+            })
     } else {
         res.end(req.url)
     }
