@@ -6,12 +6,12 @@ function sarasa() {
 function frutoseco(nombreeee) {
     console.log(nombreeee)
     console.log(typeof nombreeee)
-    sarasa(2, 4, 3, 3)
+    sarasa(2, 2, 3, 3)
 }
 
 async function mani() {
 
-    frutoseco("nuez")
+    frutoseco("nue pepino z")
     frutoseco(15)
     frutoseco([11,11,11])
     frutoseco(function() {
@@ -31,5 +31,5 @@ mani()
 const a = 1;
 
 
-let b = 22
-b = 34
+let b = 2
+b = 3
